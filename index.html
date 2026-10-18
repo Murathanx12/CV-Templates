@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Five free, editable CV templates with LaTeX sources. Create a CV locally in your browser with white paper, precise brackets and restrained blue accents.">
+  <link rel="canonical" href="https://murathanx12.github.io/CV-Templates/">
+  <meta name="theme-color" content="#f3f5f7">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CV Templates | Five technical layouts, your own words">
+  <meta property="og:description" content="Free LaTeX CV templates and a local browser editor. Five layouts, selectable text and a print-friendly visual language.">
+  <meta property="og:url" content="https://murathanx12.github.io/CV-Templates/">
+  <meta property="og:image" content="https://murathanx12.github.io/CV-Templates/social.svg">
+  <title>CV Templates | Free LaTeX templates and local CV editor</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CV Templates","applicationCategory":"BusinessApplication","operatingSystem":"Web browser","url":"https://murathanx12.github.io/CV-Templates/","description":"A free local CV editor with five printable layouts and editable LaTeX templates.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://opensource.org/license/mit"}</script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#resume">Skip to editable CV</a>
+  <header class="masthead">
+    <a class="brand" href="./">CV / TEMPLATES</a>
+    <a href="https://github.com/Murathanx12/CV-Templates">Source + LaTeX <span aria-hidden="true">↗</span></a>
+  </header>
+  <main>
+    <section class="intro">
+      <p class="kicker">Open source / white paper / precise linework</p>
+      <h1>Your work.<br>Your own words.</h1>
+      <p>Five CV layouts, with enough structure to make the work easy to find. Edit the sample locally, print your version, or take the LaTeX source to your own editor.</p>
+    </section>
+    <div class="studio">
+      <aside class="toolbar bracket" aria-label="CV options">
+        <fieldset><legend>Choose a layout</legend>
+          <label><input type="radio" name="layout" value="blackline" checked><span><strong>01 / Blackline</strong><small>Full-width category frames · 2-page sample</small></span></label>
+          <label><input type="radio" name="layout" value="blueprint"><span><strong>02 / Blueprint</strong><small>Split technical panels · 2-page sample</small></span></label>
+          <label><input type="radio" name="layout" value="compact"><span><strong>03 / Compact</strong><small>Single column, short entries · 1-page sample</small></span></label>
+          <label><input type="radio" name="layout" value="panel"><span><strong>04 / Side panel</strong><small>Skills rail + main narrative · 1-page sample</small></span></label>
+          <label><input type="radio" name="layout" value="extended"><span><strong>05 / Extended</strong><small>Editorial headings + deeper evidence · 2-page sample</small></span></label>
+        </fieldset>
+        <p class="edit-note">Click any CV text to edit. Your changes stay on this page and are never uploaded. Save a JSON copy before closing.</p>
+        <button id="print" class="primary" type="button">Print your CV / save PDF</button>
+        <div class="file-actions"><button id="save" type="button">Save edits as JSON</button><label class="file-button" for="load">Load saved JSON</label><input id="load" type="file" accept="application/json,.json" hidden></div>
+        <details><summary>Portfolio link and QR</summary><label class="field">Your portfolio URL<input id="portfolio-url" type="url" value="https://example.com" autocomplete="off"></label><p>The visible link updates with your URL. The sample QR is removed after a URL change so it cannot point to the wrong site. Add your matching QR in LaTeX for a final application.</p></details>
+        <div class="sample-links"><span class="kicker">Unedited sample files</span><a id="sample-pdf" href="samples/blackline.pdf" target="_blank" rel="noopener">Open sample PDF</a><a id="sample-tex" href="latex/blackline.tex" download>Download sample LaTeX</a></div>
+        <p class="privacy">No account. No analytics. No external fonts. Nothing is saved automatically. Browser print layout varies with content; check every page before sending.</p>
+        <p id="status" role="status" aria-live="polite"></p>
+      </aside>
+      <section class="preview-wrap" aria-labelledby="preview-heading">
+        <div class="preview-title"><h2 id="preview-heading">Blackline</h2><span id="page-guide">Two-page example</span></div>
+        <p class="subset-warning" id="subset-warning" hidden><strong>Short version:</strong> continued-work sections and longer bullets are hidden and will not print. Your edits stay available when you switch back to a full layout.</p>
+        <div class="resume blackline" id="resume" tabindex="-1">
+          <article class="sheet page-one">
+            <header class="cv-header"><div><p class="sample-label">FICTIONAL EXAMPLE · REPLACE ALL CONTENT</p><h2 contenteditable="true" data-key="name" aria-label="Candidate name">Example Candidate</h2><p class="role" contenteditable="true" data-key="headline" aria-label="Professional headline">Mechanical design, robotics and prototyping</p><p contenteditable="true" data-key="contact" aria-label="Contact details">Example City · candidate@example.com · +00 000 000 0000</p><a class="portfolio-link" href="https://example.com">example.com</a></div><div class="qr-area"><img src="qr-example.svg" width="88" height="88" alt="Sample QR code linking to example.com"><span>Portfolio</span></div></header>
+            <section class="cv-section overview"><h3>Overview</h3><p contenteditable="true" data-key="overview" aria-label="Overview">I enjoy designing mechanisms, testing ideas and making useful things. My work combines mechanical design, small software tools and hands-on prototyping. I am looking for a role where I can contribute to a real engineering project, learn from experienced people and explain the decisions behind my work.</p></section>
+            <div class="education-skills">
+              <section class="cv-section education"><h3>Education</h3><div class="entry"><h4 contenteditable="true" data-key="university">Example University</h4><p class="date" contenteditable="true" data-key="study-dates">2023 - 2027</p><p contenteditable="true" data-key="degree">BEng in Mechanical Engineering. Expected graduation: 2027.</p></div><p class="full-only" contenteditable="true" data-key="coursework">Selected study: machine design, materials, control systems and product development.</p></section>
+              <section class="cv-section skills"><h3>Technical skills</h3><p contenteditable="true" data-key="skills"><strong>Design:</strong> Parametric CAD, engineering drawings and design reviews.<br><strong>Making:</strong> 3D printing, machining preparation and prototype assembly.<br><strong>Software:</strong> Python, version control and test documentation.<br><strong>Languages:</strong> Add your languages and verified proficiency.</p></section>
+            </div>
+            <section class="cv-section experience"><h3>Experience</h3><div class="entry"><h4 contenteditable="true" data-key="employer">Example Robotics Studio</h4><p class="date" contenteditable="true" data-key="work-dates">Jun - Aug 2025</p><p class="entry-role" contenteditable="true" data-key="job-title">Engineering Intern</p><ul><li contenteditable="true" data-key="work-1">Designed and assembled a fixture for repeatable sensor tests; documented the setup for the engineering team.</li><li contenteditable="true" data-key="work-2">Compared three prototype concepts using assembly time, access and manufacturability as design criteria.</li><li class="full-only" contenteditable="true" data-key="work-3">Recorded test observations and revised the CAD model after design reviews. Replace this with your own verified outcome.</li></ul></div><div class="entry"><h4 contenteditable="true" data-key="team">Example Robotics Team</h4><p class="date" contenteditable="true" data-key="team-dates">2023 - 2025</p><p class="entry-role" contenteditable="true" data-key="team-title">Mechanical Lead</p><ul><li contenteditable="true" data-key="team-1">Coordinated the design, manufacture and assembly of a competition robot mechanism.</li><li contenteditable="true" data-key="team-2">Introduced a drawing checklist and build log so new members could follow the design decisions.</li><li class="full-only" contenteditable="true" data-key="team-3">Worked with electrical and software contributors to resolve packaging and maintenance constraints.</li></ul></div></section>
+            <section class="cv-section projects"><h3>Selected projects</h3><div class="entry"><h4 contenteditable="true" data-key="project">Modular Test Platform</h4><p class="date" contenteditable="true" data-key="project-dates">2025</p><p contenteditable="true" data-key="project-summary">A small platform for comparing mechanical prototypes using a shared mounting pattern.</p><ul><li contenteditable="true" data-key="project-1">Created CAD assemblies and drawings, printed trial parts and revised the fit after physical checks.</li><li class="full-only" contenteditable="true" data-key="project-2">Published a short design record covering the requirements, alternatives, test method and limitations.</li></ul></div></section>
+          </article>
+          <article class="sheet page-two">
+            <header class="continuation"><strong class="repeat-name">Example Candidate</strong><span>Selected work / continued</span></header>
+            <div class="detail-row">
+              <section class="cv-section research"><h3>Research and investigation</h3><h4 contenteditable="true" data-key="research">Low-cost Mechanism Monitoring</h4><p class="entry-role" contenteditable="true" data-key="research-role">Student project · 2024 - 2025</p><p contenteditable="true" data-key="research-summary">Investigated whether a simple sensor arrangement could identify changes in a repeatable mechanical test.</p><ul><li contenteditable="true" data-key="research-1">Wrote a small data-processing script and compared observations against a documented baseline.</li><li contenteditable="true" data-key="research-2">Reported where the experiment was inconclusive and proposed a more controlled follow-up test.</li></ul></section>
+              <section class="cv-section additional"><h3>Additional experience</h3><h4 contenteditable="true" data-key="additional">Community Workshop</h4><p class="entry-role" contenteditable="true" data-key="additional-role">Volunteer Mentor · 2024</p><ul><li contenteditable="true" data-key="additional-1">Helped beginners turn sketches into simple CAD models and printable parts.</li><li contenteditable="true" data-key="additional-2">Prepared practical sessions on safe tool use, measurement and documenting changes.</li></ul></section>
+            </div>
+            <section class="cv-section process"><h3>How I approach a project</h3><p contenteditable="true" data-key="process">Start with the requirement and the constraints. Sketch alternatives, make the simplest useful prototype and record what the test shows. Keep CAD, code and documentation together so another person can understand and continue the work.</p></section>
+            <section class="cv-section recognition"><h3>Selected recognition</h3><ul><li contenteditable="true" data-key="award-1">Example Design Challenge: finalist, 2025.</li><li contenteditable="true" data-key="award-2">Example Engineering Society: project presentation award, 2024.</li><li contenteditable="true" data-key="award-3">Replace these fictional entries with confirmed awards or remove the section.</li></ul></section>
+            <section class="cv-section documentation"><h3>Portfolio and documentation</h3><p contenteditable="true" data-key="documentation">Link to a small number of relevant project records. Explain your contribution, include useful drawings or tests and distinguish a team result from your individual work. Avoid confidential files and unsupported performance claims.</p><p><a class="portfolio-link" href="https://example.com">example.com</a></p></section>
+          </article>
+        </div>
+        <p class="example-note">All names, organizations and accomplishments shown here are fictional examples. Replace or remove them. Compact and Side panel intentionally use a shorter, one-page subset; the full layouts retain the continued-work sections.</p>
+      </section>
+    </div>
+  </main>
+  <footer><span>Open templates, editable text.</span><a href="README.md">Instructions and print notes</a><a href="LICENSE">MIT license</a></footer>
+</body>
+</html>

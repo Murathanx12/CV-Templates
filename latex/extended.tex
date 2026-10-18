@@ -1,0 +1,95 @@
+% Fictional example. Replace every claim and contact before use.
+% Compile with XeLaTeX, LuaLaTeX or Tectonic. All text remains selectable.
+\documentclass[10pt,a4paper]{article}
+\usepackage[left=14mm,right=14mm,top=13mm,bottom=14mm]{geometry}
+\usepackage{fontspec,xcolor,tikz,enumitem,hyperref,qrcode,microtype}
+\usetikzlibrary{calc}
+\setmainfont{texgyreheros-regular.otf}[BoldFont=texgyreheros-bold.otf,ItalicFont=texgyreheros-italic.otf]
+\definecolor{ink}{HTML}{17212D}
+\definecolor{blue}{HTML}{2361A4}
+\definecolor{muted}{HTML}{516071}
+\definecolor{line}{HTML}{CBD5DF}
+\hypersetup{colorlinks=true,urlcolor=blue,pdftitle={Example Candidate - CV template},pdfauthor={Fictional Example}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\setlist[itemize]{leftmargin=4mm,itemsep=2pt,topsep=3pt,parsep=0pt}
+\color{ink}\raggedright
+\newcommand{\candidate}{Example Candidate}
+\newcommand{\portfolio}{https://example.com}
+\newcommand{\cvheader}{%
+\begin{minipage}[t]{.79\linewidth}
+{\fontsize{6.5}{9}\selectfont\color{muted}\texttt{FICTIONAL EXAMPLE / REPLACE ALL CONTENT}}\par\vspace{4pt}
+{\fontsize{28}{31}\selectfont\bfseries\candidate}\par
+{\large\color{blue}Mechanical design, robotics and prototyping}\par\vspace{5pt}
+Example City\enspace |\enspace candidate@example.com\par
++00 000 000 0000\enspace |\enspace\href{\portfolio}{example.com}
+\end{minipage}\hfill\begin{minipage}[t]{.17\linewidth}\centering\vspace{1pt}
+\begin{tikzpicture}\node[inner sep=2mm] (q) {{\hypersetup{urlcolor=ink}\qrcode[height=17mm,level=M]{\portfolio}}};
+\draw[ink,line width=1pt] ([xshift=3mm]q.north west)--(q.north west)--([yshift=-3mm]q.north west);
+\draw[ink,line width=1pt] ([xshift=-3mm]q.north east)--(q.north east)--([yshift=-3mm]q.north east);
+\draw[ink,line width=1pt] ([xshift=3mm]q.south west)--(q.south west)--([yshift=3mm]q.south west);
+\draw[ink,line width=1pt] ([xshift=-3mm]q.south east)--(q.south east)--([yshift=3mm]q.south east);
+\end{tikzpicture}\par{\footnotesize\color{blue}Portfolio}
+\end{minipage}\par\vspace{12pt}}
+\newcommand{\continuation}{\textbf{\candidate}\hfill{\color{blue}Selected work / continued}\par\vspace{10pt}}
+\newcommand{\entry}[3]{\textbf{#1}\hfill{\small\color{muted}#2}\par{\small\color{blue}#3}\par}
+\newsavebox{\panelbox}
+
+\newenvironment{cvpanel}[1]{\par\vspace{6pt}{\color{line}\hrule}\vspace{7pt}\begin{minipage}[t]{.23\linewidth}{\color{blue}\small\bfseries\MakeUppercase{#1}}\end{minipage}\hfill\begin{minipage}[t]{.73\linewidth}}{\end{minipage}\par\vspace{10pt}}
+\begin{document}
+\fontsize{10}{12.3}\selectfont
+\cvheader
+\begin{cvpanel}{Overview}
+I enjoy designing mechanisms, testing ideas and making useful things. My work combines mechanical design, small software tools and hands-on prototyping. I am looking for a role where I can contribute to a real engineering project, learn from experienced people and explain the decisions behind my work.
+\end{cvpanel}
+\begin{cvpanel}{Education}
+\textbf{Example University}\hfill{\small 2023 - 2027}\par BEng in Mechanical Engineering. Expected graduation: 2027.\par Selected study: machine design, materials, control systems and product development.
+\end{cvpanel}
+\begin{cvpanel}{Technical skills}
+\textbf{Design:} Parametric CAD, engineering drawings and design reviews.\par
+\textbf{Making:} 3D printing, machining preparation and prototype assembly.\par
+\textbf{Software:} Python, version control and test documentation.\par
+\textbf{Languages:} Add your languages and verified proficiency.
+\end{cvpanel}
+\begin{cvpanel}{Experience}
+\entry{Example Robotics Studio}{Jun - Aug 2025}{Engineering Intern}
+\begin{itemize}\item Designed and assembled a fixture for repeatable sensor tests; documented the setup for the engineering team.
+\item Compared three prototype concepts using assembly time, access and manufacturability as design criteria.
+\item Recorded test observations and revised the CAD model after design reviews. Replace this with your own verified outcome.\end{itemize}\vspace{4pt}
+\entry{Example Robotics Team}{2023 - 2025}{Mechanical Lead}
+\begin{itemize}\item Coordinated the design, manufacture and assembly of a competition robot mechanism.
+\item Introduced a drawing checklist and build log so new members could follow the design decisions.
+\item Worked with electrical and software contributors to resolve packaging and maintenance constraints.\end{itemize}
+\end{cvpanel}
+\begin{cvpanel}{Selected projects}
+\entry{Modular Test Platform}{2025}{Design and prototyping}
+A small platform for comparing mechanical prototypes using a shared mounting pattern.
+\begin{itemize}\item Created CAD assemblies and drawings, printed trial parts and revised the fit after physical checks.
+\item Published a short design record covering the requirements, alternatives, test method and limitations.\end{itemize}
+\end{cvpanel}
+\newpage
+\continuation
+\begin{cvpanel}{Research and investigation}
+\textbf{Low-cost Mechanism Monitoring}\par{\small\color{blue}Student project / 2024 - 2025}\par
+Investigated whether a simple sensor arrangement could identify changes in a repeatable mechanical test.
+\begin{itemize}\item Wrote a small data-processing script and compared observations against a documented baseline.
+\item Reported where the experiment was inconclusive and proposed a more controlled follow-up test.\end{itemize}
+\end{cvpanel}
+\begin{cvpanel}{Additional experience}
+\textbf{Community Workshop}\par{\small\color{blue}Volunteer Mentor / 2024}\par
+\begin{itemize}\item Helped beginners turn sketches into simple CAD models and printable parts.
+\item Prepared practical sessions on safe tool use, measurement and documenting changes.\end{itemize}
+\end{cvpanel}
+\begin{cvpanel}{How I approach a project}
+Start with the requirement and the constraints. Sketch alternatives, make the simplest useful prototype and record what the test shows. Keep CAD, code and documentation together so another person can understand and continue the work.
+\end{cvpanel}
+\begin{cvpanel}{Selected recognition}
+\begin{itemize}\item Example Design Challenge: finalist, 2025.
+\item Example Engineering Society: project presentation award, 2024.
+\item Replace these fictional entries with confirmed awards or remove the section.\end{itemize}
+\end{cvpanel}
+\begin{cvpanel}{Portfolio and documentation}
+Link to a small number of relevant project records. Explain your contribution, include useful drawings or tests and distinguish a team result from your individual work. Avoid confidential files and unsupported performance claims.\par\href{\portfolio}{example.com}
+\end{cvpanel}
+\end{document}
